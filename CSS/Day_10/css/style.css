@@ -1,0 +1,9 @@
+h1 {
+    background-color: orange;
+    color: blue;
+    height: 100px;
+    width: 2000px;
+    padding: 30px;
+    border: 2px solid black;
+    margin: 30px;
+}

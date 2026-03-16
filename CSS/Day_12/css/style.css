@@ -1,0 +1,34 @@
+.parent {
+
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 30px;
+
+}
+
+.cards {
+
+    background-color: white;
+    color: black;
+    height: 450px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.cards img {
+
+    border-radius: 10px;
+
+}

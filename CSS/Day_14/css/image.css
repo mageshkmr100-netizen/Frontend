@@ -1,0 +1,30 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main {
+
+    background-color: black;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image1 {
+
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    transition: 1s;
+}
+
+.image1:hover {
+    transform: scale(1.2);
+}

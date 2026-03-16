@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    background-color: black;
+    height: 100vh;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+.cards {
+    background-color: white;
+    color: black;
+    height: 300px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: 1s;
+}
+
+.cards:hover {
+    transform: scale(1.3);
+}
+
+.cards img {
+    width: 200px;
+}       
+
+.details h4 {
+
+    font-size: small;
+}
+
+.details p {
+    font-size: xx-small; 
+}
+
+@media (max-width:600px) {
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

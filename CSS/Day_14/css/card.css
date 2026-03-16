@@ -1,0 +1,44 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main {
+
+    background-color: black;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    width: 250px;
+    transition: 1s;
+}
+
+.cards:hover {
+    transform: translateY(50px);
+
+}
+
+.content p {
+
+    font-size: x-small;
+}
+
+.content h4 {
+    font-size: medium;
+}
