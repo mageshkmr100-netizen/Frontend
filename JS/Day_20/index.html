@@ -1,0 +1,109 @@
+<script>
+    // Odd or Even
+    const number = 10
+    if(number%2==0){
+        console.log("even");        
+    }else{
+        console.log("odd");        
+    }
+
+    // Positive or Negative or Zero
+    const value = -1
+    if(value > 0){
+        console.log("Positive_Number");        
+    }else if(value < 0){
+        console.log("Negative_Number");
+    }else{
+        console.log("It's Zero");
+    }
+
+    // Greater Number
+    const number_1 = 10
+    const number_2 = 15
+    if(number_1 > number_2){
+        console.log("It is Greater Number");
+    }else{
+        console.log("It is Smaller Number");
+    }
+
+    // Calculator 
+    let value_a = 10
+    let value_b = 15
+    let operator = "+"
+    if(operator == "+"){
+        result = value_a + value_b
+    }else if(operator == "-"){
+        result = value_a - value_b
+    }else if(operator == "*"){
+        result = value_a * value_b
+    }else if(operator == "/"){
+        if(value_b === 0){
+            console.log("Invalid: It cannot be Divided!");
+        }else{
+            result = value_a / value_b
+        }
+    }else{
+        console.log("Invalid: Operator");
+    }
+    console.log("Result: ", result);
+
+
+    // Age Eligibility
+    let age = 23
+    if(age >= 18){
+        console.log("Eligible");
+    }else{
+        console.log("Not Eligible");
+    }
+
+    // Pass or Fail
+    var mark = 54
+    if(mark >= 40){
+        console.log("Pass");
+    }else{
+        console.log("Fail");
+    }
+
+    // Longest Of Three Numbers
+    let value_1 = 25
+    let value_2 = 45
+    let value_3 = 35
+    let max_val
+    if(value_1 >= value_2 && value_1 >= value_3){
+        max_val = value_1
+    }else if(value_2 >= value_1 && value_2 >= value_3){
+        max_val = value_2
+    }else{
+        max_val = value_3
+    }
+    console.log(max_val);
+    
+    // login validation
+    let user_name = "john476"
+    let password = "John@01New"
+    if(user_name && password){
+        console.log("Login Success");
+    }else{
+        console.log("Login Failed");
+    }
+
+    // Grade system
+    const mark_1 = 89
+    if(mark_1 >= 90){
+        console.log("Grade: A");
+    }else if(mark_1 >= 75){
+        console.log("Grade: B");
+    }else if(mark_1 >= 50){
+        console.log("Grade: C");
+    }else{
+        console.log("Fail");
+    }
+    
+    // leap year
+    let year = 2004
+    if(year%4==0){
+        console.log("It is a leap year");
+    }else{
+        console.log("Its not a leap year");
+    }
+</script>
