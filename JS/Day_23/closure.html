@@ -1,0 +1,40 @@
+<script>
+    const out_func = () => {
+        let val = 0
+        const inn_func = () => {
+            val++
+            console.log(val);
+        }
+        return inn_func
+    }
+    const var_new = out_func()
+    var_new()
+    var_new()
+    var_new()
+
+
+    // private variable
+
+    const out_var = () => {
+
+        const priv_var = () => {
+            const private = 100
+            console.log(private);
+        }
+        return priv_var
+    }
+    const var_opt = out_var()
+    var_opt()
+
+
+    // add function
+    const get_int = () => {
+        const add_int = (var_1, var_2) => {
+            const tot = var_1 + var_2
+            console.log(tot);
+        }
+        return add_int
+    }
+    const ans = get_int()
+    ans(5, 10)
+</script>

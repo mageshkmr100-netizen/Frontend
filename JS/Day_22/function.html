@@ -1,0 +1,285 @@
+<script>
+    // normal function
+    const num_1 = 14
+    const num_2 = 10
+    var symbol = "+"
+    function add(){
+        if(symbol == "+"){
+            res = num_1 + num_2
+        }
+        return res
+    }
+    add()
+    
+
+    const user_login = "logged_in"
+    function login(){
+        if(user_login){
+            res = "Welcome Back!"
+        }
+        return res
+    }
+    login()
+    
+
+
+    const num_3 = 23
+    const num_4 = 13
+    var symbol = "-" 
+    function subtract(){
+        if(symbol == "-"){
+            res = num_3 - num_4
+        }
+        return res
+    }
+    subtract()
+
+
+
+    const chapter = "The Alchemist"
+    function story(){
+        console.log(chapter);
+    }
+    story()
+
+    const value = "Empty"
+    function find(){
+        console.log(value);
+    }
+    find()
+
+    const look = true
+    function search(){
+        console.log(look);
+    }
+    search()
+    
+    const focus = "+"
+    function adjust(){
+        console.log(focus);
+    }
+    adjust()
+
+    const sum = 134
+    function total(){
+        console.log(sum); 
+    }
+    total()
+
+    const copy_data = "Value is found"
+    function find_me(){
+        console.log(copy_data);   
+    }
+    find_me()
+
+    const cart_items = 5
+    function order_list(){
+        console.log(cart_items);
+    }
+    order_list()
+
+    const reject_order = "Order Rejected"
+    function cancel_order(){
+        console.log(reject_order);
+    }
+    cancel_order()
+
+    const first_place = "Vijay"
+    function leader_board(){
+        console.log(first_place);
+    }
+    leader_board()
+
+    const artist = "Ken"
+    function end_credit(){
+        console.log(artist);
+    }
+    end_credit()
+
+    const reached = "delivered successfully"
+    function delivery_status(){
+        console.log(reached);   
+    }
+    delivery_status()
+
+    const status_updated = true
+    function new_status(){
+        console.log(status_updated);
+    }
+    new_status()
+    
+
+
+
+    // anonymous function
+    const value_new = 1000000000
+    const new_name = function(){
+        console.log(value_new);
+    }
+    new_name()
+
+
+    const new_var = function(){
+        const var_data = "string"
+        console.log(var_data);   
+    }
+    new_var()
+
+
+    const data_table = function(){
+        const table_val = 777
+        console.log(table_val);
+    }
+    data_table()
+
+
+    const data_str = "happy birthday"
+    const string_var = function(){
+        console.log(data_str);
+    }
+    string_var()
+
+
+    const new_data = [2, 3, 5, 6]
+    const data_set = function(){
+        console.log(new_data);
+    }
+    data_set()
+    
+
+    const func_data = {val: true, data:"best"}
+    const data_base = function(){
+        console.log(func_data);
+    }
+    data_base()
+
+
+    const base_link = "https://gemini.google.com"
+    const page_link = function(){
+        console.log(base_link);
+    }
+    page_link()
+
+
+    const home_link = "https://www.google.com/home.html"
+    const home_page = function(){
+        console.log(home_link);
+    }
+    home_page()
+
+
+    const mail_id = "abc@gmail.com"
+    const mail_check = function(){
+        console.log(mail_id);
+    }
+    mail_check()
+
+
+    const digit_value = "1345"
+    const new_digit = function(){
+        console.log(digit_value);
+    }
+    new_digit()
+
+
+
+
+    // arrow function
+    const arr_func = () => console.log("Arrow Function Created.");
+    arr_func()
+
+    const new_sum = () => console.log(264);
+    new_sum()
+
+    const bool_val = () => console.log(true);
+    bool_val()
+
+    const two_sum = () => console.log("[0, 1]");
+    two_sum()
+
+    const map_func = () => console.log("{name: :'john', age: 24}");
+    map_func()
+
+
+    const find_diff = () => {
+        const diff_val = 23
+        console.log(diff_val);
+    }
+    find_diff()
+
+    const max_val = () => {
+        const val_max = 350
+        console.log(val_max);
+    }
+    max_val()
+
+    const fam_list = () => {
+        const family_mem = 4
+        console.log(family_mem);
+    }
+    fam_list()
+
+    const arr_list = () => {
+        arr_list()
+        const list_data = "[5, 3, 1]"
+        console.log(list_data);
+    }
+
+    const func_math = () => {
+        const math_val = 20 + 10
+        console.log(math_val);
+    }
+    func_math()
+    
+
+    // arrow function with parameters and arguments
+
+    const mul_func = (n) => console.log(n*n);
+    mul_func(7)
+
+     const add_func = (o, p) => console.log(o + p);
+    add_func(10, 20)
+
+    const sub_func = (a, b) => console.log(b - a);
+    sub_func(20, 10)
+
+    const div_func = (c, d) => console.log(c / d);
+    arr_func(49, 7)
+
+    const str_func = (e, f) => console.log(`$[e] $[f]`);
+    arr_func("happy", "new year")
+
+
+    const add_sum = (num_1, num_2) => {
+        const ans = num_1 + num_2
+        console.log(ans);
+    }
+    add_sum(1, 2)
+
+    const three_sum = (l, k, g) => {
+        const add_val = l + k - g
+        console.log(add_val);
+    }
+    three_sum(1, 3, 5)
+
+    const total_val = (a, b, c) => {
+        const val_tot = a * b - c
+        console.log(val_tot);
+    }
+    total_val(2, 5, 3)
+
+    const arrow_table = (c, d, e, f) => {
+        const val_con = c * d + e * f
+        console.log(val_con);
+    }
+    arrow_table(2, 8, 3, 4)
+
+    const arr_diff = (a, c, d) => {
+        const key_diff = a / c * d
+        console.log(key_diff);
+    }
+    arr_diff(10, 2, 8)
+
+   
+
+</script>
