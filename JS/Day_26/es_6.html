@@ -1,0 +1,34 @@
+<script>
+    // template literals
+    const name = "john"
+    const age = 25
+    const temp_ltrls = console.log(`Hello ${name}, Your age is ${age}.`);
+    
+
+    // const and let 
+    const data = "one"
+    console.log(data);
+    // data = "two"            cannot reassign
+    // const data = "three"    cannot redeclare
+    // const data              cannot declare
+
+    let val = 21
+    val = 23
+    console.log(val);
+    // let var        cannot declare
+    // let val = 24   cannot redeclare
+
+
+    // function with default parameters
+    const new_func = (seats, user="guest") => {
+        console.log(`Welcome ${user}!, you reserved ${seats} for dinning.`);
+    }
+    new_func(4)
+
+
+    // odd or even using ternary operator
+    const num = 20
+    const new_num = num%2===0?"Even":"Odd"
+    console.log(new_num);
+    
+</script>
