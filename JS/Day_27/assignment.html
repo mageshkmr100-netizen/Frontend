@@ -1,0 +1,57 @@
+<script>
+    //Solve problems without using built-in functions
+
+    // 2nd largest number
+
+    const find_second_largest = (array) =>{
+        if (array.length === 0) return null
+        if (array.length < 2) return array[0]
+
+        let largest = -Infinity
+        let second_largest = -Infinity
+        for (const num of array){
+            if(num > largest){
+                second_largest = largest
+                largest = num
+            }else if(num > second_largest && num !== largest){
+                second_largest = num
+            }
+        }
+        return second_largest === -Infinity ? null : second_largest
+    }
+
+    const arr_1 = [1, 34, 56, 25, 23, 5, 76]
+    console.log(find_second_largest(arr_1));
+
+
+    // reverse a string
+    const reverse_str = (string) =>{
+        new_str = ""
+        for(let i = str.length - 1; i>=0; i--){
+            new_str += str[i]
+        }
+        return new_str
+    }
+    const str = "maintain"
+    console.log(reverse_str(str));
+
+
+    // palindrome or not
+    const is_palindrome = (words) =>{
+        let left = 0
+        let right = words.length - 1
+        while(left < right){
+            if (words[left] !== words[right]){
+                return false
+            }
+            left++
+            right--
+        }
+        return true
+    }
+    const char = "malayalam"
+    console.log(is_palindrome(char));
+    
+
+    
+</script>

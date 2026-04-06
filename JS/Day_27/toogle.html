@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toogle</title>
+</head>
+<body>
+    <button onclick="press_me()">Press Here</button>
+    <div id="head" style="display: none; justify-content: center; align-items: center; background-color: crimson; color: gold; 
+    padding: 10px; margin: 5px; border-radius: 20px; width: 350px; height: 60px;">
+        <h1>You can make it Toogle</h1>
+    </div>
+    
+
+
+    <script>
+        const press_me = () => {
+            const data = document.getElementById("head")
+            console.log(data.style.display);
+
+            if (data.style.display === "none"){
+                data.style.display = "block"
+            }
+            else if (data.style.display === "block"){
+                data.style.display = "none"
+            }
+            
+        }
+    </script>
+</body>
+</html>
