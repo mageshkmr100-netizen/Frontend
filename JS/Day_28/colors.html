@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changing form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="bg-gray-200 flex justify-center text-center">
+        <input type="text" id="color_form" class="border rounded m-3" placeholder="e.g. red or #ff0000">
+        <button id="bth_change" class="bg-sky-600 p-2 m-2 rounded text-white">Change Color</button>
+    </div>
+
+    <div id="box" class="flex justify-center text-center p-10">
+        <div id="color_place" class="flex justify-center text-center rounded-full w-100 h-100  border-2 border-gray-300">
+        </div>
+    </div>
+</body>
+</html>
