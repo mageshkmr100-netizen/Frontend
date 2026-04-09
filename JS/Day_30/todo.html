@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <form id="form_data">
+        <input type="text" id="username" placeholder="Enter your UserName" class="border p-2 m-3 rounded">
+        <input type="tel" id="usermobile" placeholder="Enter your Mobile Number" class="border p-2 m-3 rounded">
+        <input type="password" id="password" placeholder="Enter your Password" class="border p-2 m-3 rounded">
+        <button id="continue_btn" class="bg-sky-600 rounded p-2 text-white">Continue</button>
+        <p id="error"></p>
+    </form>
+
+    <div>
+        <table class="border">
+            <thead>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Password</th>
+            </thead>
+            <tbody id="table_body">
+
+            </tbody>
+        </table>
+    </div>
+    
+
+
+
+    <script>
+
+        const loading = ()=>{
+            const change_data = JSON.parse(localStorage.getItem("todo"))
+            const show = document.getElementById("table_body")
+            show.innerHTML =""
+
+            change_data.forEach((e)=>{
+                const row = `<tr>
+
+                    <td>${e.user_name}</td>
+                    <td>${e.user_mobile}</td>
+                    <td>${e.Password}</td>
+
+                    </tr>`
+                    show.innerHTML += row
+            })
+        }
+
+        loading()
+
+        const btn = document.getElementById("continue_btn")
+
+        btn.addEventListener("click", (e)=>{
+            e.preventDefault()
+
+            const user_name = document.getElementById("username").value
+            const user_mobile = document.getElementById("usermobile").value
+            const Password = document.getElementById("password").value
+
+
+
+
+            if (!user_name || !user_mobile|| !Password){
+                document.getElementById("error").innerText = " **Please fill all the required Details**"
+                document.getElementById("error").style.color = "red"
+                return
+            }
+
+            if (user_mobile.length !== 10){
+                alert("please check your 10 digit phone number")
+                return
+            }
+
+            const data_adding = JSON.parse(localStorage.getItem("todo")) || []
+            const user_data = {user_name,user_mobile,Password}
+            data_adding.push(user_data)
+            localStorage.setItem("todo", JSON.stringify(data_adding))
+
+            alert("Successfully Submitted")
+
+            document.getElementById("form_data").reset()
+        })
+
+    </script>
+</body>
+</html>
