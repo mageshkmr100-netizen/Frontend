@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
+import MainPage from "./MainPage"
 
 const Login = () => {
 
@@ -25,7 +26,7 @@ const Login = () => {
         e.preventDefault()
         
         if (mail === usermail && password === userpassword){
-            navigate("/")
+            navigate("/home")
         }else{
             navigate("/register")
         }
@@ -42,7 +43,7 @@ const Login = () => {
                 <input onChange={passworddata} type="password" placeholder="Enter the Password" className="border bg-gray-100 rounded p-2"/>
                 <div className="flex gap-10">
                 <button onClick={validation} className="bg-blue-400 rounded w-30 p-1 text-white hover:bg-blue-500 hover:text-white">Login</button>
-                <Link className="text-blue-500 hover:text-purple-300">Sign Up</Link>    
+                <Link className="text-blue-500 hover:text-purple-300" to='/register'>Sign Up</Link>    
                 </div>     
             </form>
             
