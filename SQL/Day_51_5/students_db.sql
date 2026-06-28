@@ -149,3 +149,10 @@ SELECT students.student_name, COUNT(subjects.subject_name) as No_of_subjects fro
 
 SELECT students.student_name, MAX(subjects.subject_mark) as Highest_mark from students INNER JOIN subjects on students.student_id = subjects.student_id GROUP BY students.student_id, students.student_name;
 
+SELECT students.student_name, MIN(subjects.subject_mark) as Lowest_mark from students INNER JOIN subjects on students.student_id = subjects.student_id GROUP BY students.student_id, students.student_name;
+
+SELECT subjects.subject_name, SUM(subjects.subject_mark) as sub_total_mark from subjects GROUP BY subjects.subject_name;
+
+SELECT subjects.subject_name, AVG(subjects.subject_mark) as Subject_avg from subjects GROUP BY subjects.subject_name HAVING AVG(subjects.subject_mark) > 90;
+
+SELECT subjects.subject_name, COUNT(students.student_name) as No_of_students from subjects INNER JOIN students on subjects.student_id = students.student_id WHERE subjects.subject_mark > 90 GROUP BY subjects.subject_name;
