@@ -139,4 +139,24 @@ SELECT students.student_name, marks.total_mark from students INNER JOIN marks ON
 
 SELECT students.student_name, marks.total_mark from students INNER JOIN marks ON students.student_id = marks.student_id ORDER BY marks.total_mark DESC;
 
-SELECT students.student_name, SUM(subjects.subject_mark) from students INNER JOIN subjects ON students.student_id = subjects.student_id WHERE (SELECT AVG(subjects.subject_mark) from subjects);
+SELECT students.student_name, marks.total_mark from students INNER JOIN marks ON students.student_id = marks.student_id WHERE marks.total_mark < (SELECT AVG(total_mark) from marks);
+
+SET @rank = 0;
+ 
+SELECT
+ @rank := @rank + 1 as Rank_,
+ students.student_name,
+ SUM(subjects.subject_mark) as Total,
+ ROUND(AVG(subjects.subject_mark), 2) as Average,
+ marks.subject_status as Status
+ 
+ FROM students
+ INNER JOIN subjects
+ ON students.student_id = subjects.student_id
+ INNER JOIN marks
+ ON students.student_id = marks.student_id
+ GROUP BY 
+ students.student_id,
+ students.student_name,
+  marks.subject_status
+  ORDER BY Total DESC;

@@ -12,10 +12,13 @@ const Home = () => {
     setMail(e.target.value)
   }
 
-  
-  const clickchange = () => {
-    setData(mail)
+  const getpassword = (e) => {
+    e.preventDefault()
+    setPassword(e.target.value)
+  } 
 
+  const clickchange = () => {
+    setData(mail,password)
   }
 
   return (
@@ -23,7 +26,7 @@ const Home = () => {
     <div>
       <form>
         <input onChange={getmail} type="text" placeholder='Enter your Mail id'/>
-        <input type="text" placeholder='Enter your Password'/>
+        <input onChange={getpassword} type="text" placeholder='Enter your Password'/>
         <button onClick={clickchange}>Login</button>
       </form>
       <p>{data}</p>
